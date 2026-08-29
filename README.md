@@ -1,21 +1,29 @@
 # Indonesia Tax Microsimulation Model
 
-A Python-based personal income tax (PIT) microsimulation model for Indonesia, developed as an applied tax policy project during the Master of International Development Policy (MIDP) program at Duke University.
+A Python-based personal income tax (PIT) microsimulation model for Indonesia, developed during the Master of International Development Policy (MIDP) program at Duke University.
 
 ## Overview
 
-This repository contains an Indonesia-specific adaptation of a tax microsimulation framework used for tax policy analysis.
+This project adapts an existing tax microsimulation framework to model Indonesia's individual income tax system using taxpayer-level microdata, calibrated sample weights, policy parameters, and growth assumptions.
 
-The model translates Indonesian personal income tax rules into a computational framework that can be used to:
+The Indonesia-specific implementation translates PIT rules into Python-based calculation functions and enables baseline and reform simulations across multiple years. The model can estimate ordinary personal income tax, selected categories of final income tax, aggregate revenue impacts, and distributional outcomes.
 
-* reproduce a baseline personal income tax system;
-* simulate alternative tax policy parameters;
-* estimate changes in individual income tax liabilities;
-* estimate selected final income taxes;
-* project tax liabilities across simulation years; and
-* support distributional and policy analysis.
+The current implementation focuses on **Personal Income Tax (PIT)** and has been successfully tested for simulation years **2021–2027** using the project's lightweight simulation runner.
 
-The current Indonesia implementation focuses on **Personal Income Tax (PIT)**.
+### My Contribution
+
+The Indonesia-specific work in this repository includes:
+
+* translating Indonesian PIT rules into microsimulation parameters and calculation functions;
+* defining Indonesia-specific taxpayer variables and model mappings;
+* implementing ordinary and final income tax calculations;
+* configuring growth factors and multi-year simulations;
+* preparing and transforming administrative tax data for microsimulation;
+* calibrating sample weights and integrating them into the microsimulation workflow;
+* developing reform scenarios for policy simulation; and
+* adapting the upstream framework for an Indonesia PIT workflow.
+
+The administrative microdata and calibrated working weights used in the original analysis are not distributed in this public repository.
 
 ## Current Model Status
 
