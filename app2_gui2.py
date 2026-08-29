@@ -1,6 +1,8 @@
 """
-app1.py illustrates use of pitaxcalc-demo release 2.0.0 (India version).
-USAGE: python app2.py
+Lightweight runner for the Indonesia PIT microsimulation model.
+
+This script configures the Indonesia PIT model and runs simulations using
+the underlying tax microsimulation framework.
 """
 import pandas as pd
 import json
