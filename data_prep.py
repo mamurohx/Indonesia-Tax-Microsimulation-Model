@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Thu Feb 15 15:11:31 2024
+Prepare Indonesian PIT administrative data for the microsimulation model.
 
-@author: windi
+This script cleans and combines tax return data, incorporates final-income
+information, constructs a stratified sample, and calibrates sample weights.
 """
 
 # insert into the file
@@ -21,26 +22,26 @@ path2 = os.environ.get("PIT_OUTPUT_DIR", "taxcalc/")
 path3 = os.environ.get("PIT_SECONDARY_DATA_DIR", "data/raw/secondary/")
 
 
-#reading csv datasets with pipe ("|") delimited
+# Read pipe-delimited CSV datasets.
 df1 = pd.read_csv(path+"_op21_01.csv", sep= "|", on_bad_lines="warn")
 df2 = pd.read_csv(path+"_op21_23.csv", sep= "|", on_bad_lines="warn")
 df3 = pd.read_csv(path+"_op21_45.csv", sep= "|", on_bad_lines="warn")
 df4 = pd.read_csv(path+"_op21_67.csv", sep= "|", on_bad_lines="warn")
 df5 = pd.read_csv(path+"_op21_89.csv", sep= "|", on_bad_lines="warn")
 
-#concatinating cvs datasets
+# Concatenate CSV datasets.
 df_all = pd.concat([df1, df2, df3, df4, df5], axis = 0)
 
 #df_all = pd.read_csv(path2+"pit21.csv")
 
-#Creating a Year Field
+# Create a year field.
 df_all["Year"] = df_all["ID_MS_TH_PJK"]/100
 df_all["Year"] = df_all["Year"].astype("int")
 
-#Cleaning up invalid tax returns 
-#(By the law, form 1770 SS is only for employees who has income less than IDR 60 millions. 
-#But, in the 2021 we found 800+ 1770SS with income more than IDR 100 millions 
-#and with some very huge number IDR 9,000 trilliun)
+# Clean implausible 1770SS records.
+# Form 1770SS is intended for employees with annual income below IDR 60 million.
+# In the 2021 data, more than 800 records reported net income above IDR 100 million,
+# including some implausibly large values; these records are excluded.
 df_all.JNS_SPT = df_all.JNS_SPT.astype("string")
 df_all=df_all.drop(df_all[(df_all.JML_PH_NETO > 1e8) & (df_all.JNS_SPT=="1770SS")].index)
 
@@ -48,7 +49,7 @@ df_all=df_all.drop(df_all[(df_all.JML_PH_NETO > 1e8) & (df_all.JNS_SPT=="1770SS"
 # df_all=df_all.drop(df_all[(df_all.JML_PH_NETO > 1e8) & (df_all.JNS_SPT=="1770SS")].index)
 
 
-#Cleaning up NaNs
+# Fill missing values in tax return variables with zero.
 df_all["JML_TANGGUNGAN"] = df_all["JML_TANGGUNGAN"].fillna(0)
 df_all["JML_TANGGUNGAN"] = df_all["JML_TANGGUNGAN"].astype("int")
 
@@ -161,7 +162,7 @@ df_sb = df_sb[["NPWP", "JML_PU", "JML_PPH_FINAL_DIBYR" ]]
 
 df_all = pd.merge(df_all, df_sb, on = "NPWP", how = "left")
 
-#Cleaning up NaNs
+# Fill missing values in final-income variables with zero.
 df_all["JML_PH_BRUTO_DISKONTO_SBI"] = df_all["JML_PH_BRUTO_DISKONTO_SBI"].fillna(0)
 df_all["JML_PH_BRUTO_OBLIGASI"] = df_all["JML_PH_BRUTO_OBLIGASI"].fillna(0)
 df_all["JML_PH_BRUTO_PENJUALAN_SAHAM"] = df_all["JML_PH_BRUTO_PENJUALAN_SAHAM"].fillna(0)
