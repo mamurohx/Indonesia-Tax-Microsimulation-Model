@@ -1,5 +1,8 @@
 """
-pitaxcalc-demo functions that calculate personal income tax liability.
+Indonesia personal income tax calculation functions.
+
+This module contains the core PIT and final-income tax calculations used
+by the Indonesia tax microsimulation model.
 """
 # CODING-STYLE CHECKS:
 # pycodestyle functions.py
