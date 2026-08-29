@@ -1,0 +1,84 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+htmlcov/
+.coverage
+
+# Environments
+.env
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Indonesia microdata - not distributed
+taxcalc/pit_sample_2021_with_final_tax.csv
+taxcalc/pit21_sample_2021_with_final_tax_weights_calibrated.csv
+
+# Local / generated outputs
+*-dump.csv
+*-dump.out
+*_old.csv
+
+# Large legacy training datasets not distributed
+taxcalc/gst_cmie_august_2020.csv
+taxcalc/gst.csv
+taxcalc/gst_weights_cmie_august_2020.csv
+taxcalc/gst2.csv
+taxcalc/gst_weights_cmie_july_2020.csv
+taxcalc/gst_weights.csv
+taxcalc/cit_panel.csv
+taxcalc/cit_cross.csv
+taxcalc/cit_data_training.csv
+taxcalc/pit_data_training.csv
+taxcalc/pit_weights_macedonia_new.csv
+taxcalc/pit_weights_training.csv
+
+# Generated / legacy dump files
+*-dump-*.csv
+*-dump-*.out
+
+# Legacy training documents and datasets
+microsimulation_manual/
+CIT Microsimulation - Adding New Variables.pdf
+Oil_CIT.xlsx
+Oil_CIT_training.xlsx
+
+# Temporary serialized working files
+file1.pkl
+file2.pkl
+taxcalc/pit_weights_srilanka.csv
+
+# Generated distribution outputs
+Decilemeans.csv
+Decilesum.csv
+Distribution Tables_Base.csv
+Distribution Tables_Reform.csv
+
+# Generated charts / image assets not included in initial public repo
+Average Tax Burden Change.png
+Change in Total Tax Burden Due to Reform.png
+Composition of Tax Changes due to Reforms.png
+Contribution to total PIT - Before and After Reform.png
+Contribution to total PIT.png
+Total_collection_PIT.png
+bar.png
+blank.png
+egypt_flag.jpg
+world_bank.png
+
+# Legacy / analysis data not included
+cit_etr.csv
+
+# Legacy / exploratory analysis scripts
+sampling_data_prep.py
+gini_test.py
+taxcalc/gini.py
+taxcalc/temp.py
+stata_python.py
