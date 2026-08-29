@@ -57,7 +57,7 @@
     },
     "_rate2": {  
         "long_name": "PIT tax rate 2", 
-        "description": "The lowest tax rate, applied to the portion of taxable income below tax bracket 1.",
+        "description": "Tax rate applied to the portion of taxable income above tax bracket 1 and up to tax bracket 2.",
         "itr_ref": "R code",
         "notes": "",
         "row_var": "AYEAR",    
@@ -84,7 +84,7 @@
     },
     "_tbrk2": {
         "long_name": "PIT tax bracket 2 (upper threshold)",
-        "description": "Taxable income below this threshold is taxed at tax rate 1.",
+        "description": "Taxable income above tax bracket 1 and up to this threshold is taxed at tax rate 2.",
         "itr_ref": "R code",
         "notes": "",
         "row_var": "AYEAR",
@@ -113,7 +113,7 @@
     },
     "_rate3": {  
         "long_name": "PIT tax rate 3", 
-        "description": "The lowest tax rate, applied to the portion of taxable income below tax bracket 1.",
+        "description": "Tax rate applied to the portion of taxable income above tax bracket 2 and up to tax bracket 3.",
         "itr_ref": "R code",
         "notes": "",
         "row_var": "AYEAR",    
@@ -141,7 +141,7 @@
     },
     "_tbrk3": {
         "long_name": "PIT tax bracket 3 (upper threshold)",
-        "description": "Taxable income below this threshold is taxed at tax rate 3.",
+        "description": "Taxable income above tax bracket 2 and up to this threshold is taxed at tax rate 3.",
         "itr_ref": "R code",
         "notes": "",
         "row_var": "AYEAR",
@@ -170,7 +170,7 @@
     },
     "_rate4": {
         "long_name": "PIT tax rate 4",
-        "description": "The second lowest tax rate, applied to the portion of taxable income below tax bracket 2 and above tax bracket 1.",
+        "description": "Tax rate applied to the portion of taxable income above tax bracket 3 and up to tax bracket 4.",
         "itr_ref": "R code",
         "notes": "",
         "row_var": "AYEAR",
@@ -198,7 +198,7 @@
     },
     "_tbrk4": {
         "long_name": "PIT tax bracket 4 (upper threshold)",
-        "description": "Income below this threshold and above tax bracket 1 is taxed at tax rate 2.",
+        "description": "Taxable income above tax bracket 3 and up to this threshold is taxed at tax rate 4.",
         "itr_ref": "R code",
         "notes": "",
         "row_var": "AYEAR",
@@ -226,7 +226,7 @@
     },
     "_rate5": {
         "long_name": "PIT tax rate 5",
-        "description": "The second lowest tax rate, applied to the portion of taxable income below tax bracket 2 and above tax bracket 1.",
+        "description": "Tax rate applied to the portion of taxable income above tax bracket 4.",
         "itr_ref": "R code",
         "notes": "",
         "row_var": "AYEAR",
