@@ -435,7 +435,7 @@
         },
         "JML_PROFIT_SB": {
             "type": "float",
-            "desc": "ESTIMATED PROFIT OF SMALL BUSINESSES (20% MARGIN)",
+            "desc": "ESTIMATED PROFIT OF SMALL BUSINESSES (15% MARGIN)",
             "form": {
                 "2021": "1770.G.k"
             },
@@ -599,7 +599,7 @@
         },
         "Calculated_Personal_Exemptions": {
             "type": "float",
-            "desc": "Tax on Short Term Capital Gains at 15% under current law(Tax_SHORT_TERM_RATE1)",
+            "desc": "Calculated personal exemption",
             "form": {
                 "2017": "ITR-3 Schedule SI line 1"
             },
@@ -608,7 +608,7 @@
         },
         "Calculated_Personal_Exemptions_1770SS": {
             "type": "float",
-            "desc": "Tax on Short Term Capital Gains at 15% under current law(Tax_SHORT_TERM_RATE1)",
+            "desc": "Calculated personal exemption",
             "form": {
                 "2017": "ITR-3 Schedule SI line 1"
             },
@@ -617,7 +617,7 @@
         },
         "Calculated_Personal_Exemptions_1770S": {
             "type": "float",
-            "desc": "Tax on Short Term Capital Gains at 15% under current law(Tax_SHORT_TERM_RATE1)",
+            "desc": "Calculated personal exemption",
             "form": {
                 "2017": "ITR-3 Schedule SI line 1"
             },
@@ -626,7 +626,7 @@
         },
         "Calculated_Personal_Exemptions_1770": {
             "type": "float",
-            "desc": "Tax on Short Term Capital Gains at 15% under current law(Tax_SHORT_TERM_RATE1)",
+            "desc": "Calculated personal exemption",
             "form": {
                 "2017": "ITR-3 Schedule SI line 1"
             },
@@ -653,7 +653,7 @@
         },
         "Calculated_Taxable_Income_1770SS": {
             "type": "float",
-            "desc": "Tax on Short Term Capital Gains at 30% under current law (Tax_SHORT_TERM_RATE2)",
+            "desc": "Calculated taxable income",
             "form": {
                 "2017": "ITR-3 Schedule SI line 2"
             },
@@ -662,7 +662,7 @@
         },
         "Calculated_Taxable_Income_1770S": {
             "type": "float",
-            "desc": "Tax on Short Term Capital Gains at 30% under current law (Tax_SHORT_TERM_RATE2)",
+            "desc": "Calculated taxable income",
             "form": {
                 "2017": "ITR-3 Schedule SI line 2"
             },
@@ -671,7 +671,7 @@
         },
         "Calculated_Taxable_Income_1770": {
             "type": "float",
-            "desc": "Tax on Short Term Capital Gains at 30% under current law (Tax_SHORT_TERM_RATE2)",
+            "desc": "Calculated taxable income",
             "form": {
                 "2017": "ITR-3 Schedule SI line 2"
             },
